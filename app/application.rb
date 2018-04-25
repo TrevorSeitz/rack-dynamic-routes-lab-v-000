@@ -3,9 +3,10 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path=="/item/<Item Name>"
-      resp.write "The item costs"
-    elsif @@items.include?
+    if req.path=="/item/env"
+      if @@items.include?
+      resp.write "The item costs #{item.price}"
+    els
       resp.write "Item not found"
       resp status = 400
     else
