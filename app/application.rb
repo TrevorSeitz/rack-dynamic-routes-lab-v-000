@@ -3,7 +3,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path=="/item"
+    if req.path=="/item/<Item Name>"
       resp.write "The item costs"
     elsif !item.all.include?
       resp.write "item not found"
