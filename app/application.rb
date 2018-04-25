@@ -7,8 +7,6 @@ class Application
       item = req.path.split("/items/").last
       @@items.find do |i|
         if i.name == item
-        # binding.pry
-          # resp.write "The item costs $#{i.price}"
           resp.write i.price
         else
           resp.write "Item not found"
