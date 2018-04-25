@@ -5,7 +5,7 @@ class Application
 
     if req.path=="/item/<Item Name>"
       resp.write "The item costs"
-    elsif @@item.include?
+    elsif @@items.include?
       resp.write "Item not found"
       resp status = 400
     else
