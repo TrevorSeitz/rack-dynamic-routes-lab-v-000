@@ -5,7 +5,7 @@ class Application
 
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      @@items.each do |i|
+      @@items.find do |i|
         if i.name == item
         # binding.pry
           # resp.write "The item costs $#{i.price}"
