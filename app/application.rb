@@ -3,7 +3,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path=="/item/env"
+    if req.path.match(/items/)
       if @@items.include?(item)
       resp.write "The item costs #{item.price}"
       else
