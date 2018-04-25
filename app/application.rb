@@ -6,9 +6,9 @@ class Application
     if req.path=="/item/env"
       if @@items.include?(item)
       resp.write "The item costs #{item.price}"
-    els
-      resp.write "Item not found"
-      resp status = 400
+      else
+        resp.write "Item not found"
+        resp status = 400end
     else
       resp.write "Route not found"
       resp.status = 404
