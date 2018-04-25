@@ -4,7 +4,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path=="/item/env"
-      if @@items.include?
+      if @@items.include?(item)
       resp.write "The item costs #{item.price}"
     els
       resp.write "Item not found"
