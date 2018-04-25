@@ -8,7 +8,8 @@ class Application
       @@items.each do |i|
         if i.name == item
         # binding.pry
-          resp.write "The item costs $#{i.price}"
+          # resp.write "The item costs $#{i.price}"
+          resp.write i.price
         else
           resp.write "Item not found"
           resp status = 400
