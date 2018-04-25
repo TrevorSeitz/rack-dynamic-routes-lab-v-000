@@ -5,6 +5,9 @@ class Application
 
     if req.path=="/item"
       resp.write "The item costs"
+    elsif !item.all.include?
+      resp.write "item not found"
+      resp status = 400
     else
       resp.write "Route not found"
       resp.status = 404
