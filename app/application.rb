@@ -5,6 +5,7 @@ class Application
 
     if req.path.match(/items/)
       item = req.path.split("/items/").last
+      pry
       if @@items.include?(item)
         resp.write "The item costs #{item.price}"
       else
