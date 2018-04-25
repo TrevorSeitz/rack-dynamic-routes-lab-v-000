@@ -3,10 +3,10 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path=="/item"
-      resp.write "The item costs"
+    if req.path=="/items"
+      resp.write "The item costs #{Ite,.price}"
     else
-      resp.write "Route not found"
+      resp.write "Item not found"
       resp.status = 404
     end
     resp.finish
